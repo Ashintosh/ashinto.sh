@@ -19,20 +19,16 @@ Here, you'll find posts on topics such as:
 - **General InfoSec insights**: Commentary, analysis, and reflections on the security landscape.
 
 ### How to Contact Me
-- SimpleX
-- Matrix
+
 - Email: ash@ashinto.sh
 
-### PGP
+### PGP Key
 
-For encrypted or signed communications, here's my primary PGP key:
+**Fingerprint:** `6D54 1A8F 8336 B3F4 7153 37C4 C356 A6B2 11B0 0805`
 
-**Fingerprint:**
-ABCD 1234 EFGH 5678 IJKL 9012 MNOP QRST UVWX YZAB CDEF
+[Full PGP Public Key](../pgp.txt)
 
-[Full PGP Public Key](https://keys.openpgp.org/search?q=ash@opensrcit.com)
-
-### Donate
+<!-- ### Donate
 
 If you appreciate the work I do here, you can support the blog with a crypto contribution.
 
@@ -41,8 +37,8 @@ Your support enables ongoing research and content creation focused on real-world
 **Crypto addresses:**
 - Monero (XMR): `monero_address`
 - Bitcoin (BTC): `bitcoin_address`
-- Litecoin (LTC): `litecoin_address`
+- Litecoin (LTC): `litecoin_address` -->
 
 ---
 
-Everything here is built with **privacy, trust, and control** in mind. Whether you’re a fellow researcher, a privacy-conscious user, or simply curious, I hope you find something useful here.
+Everything here is built with **privacy, security, and trust** in mind. Whether you’re a fellow researcher, a privacy-conscious user, or simply curious, I hope you find something useful here.
