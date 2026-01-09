@@ -39,7 +39,7 @@ showAuthors = true        # Show authors on post page
 showCategories = true     # Show categories on post page
 
 [params]
-user = "ash"
+user = "ashintosh"
 hostname = "ashinto.sh"
 
   [params.styles]

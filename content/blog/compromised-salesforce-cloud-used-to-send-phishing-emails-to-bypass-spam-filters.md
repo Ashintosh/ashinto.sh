@@ -1,5 +1,5 @@
 +++
-author = 'Ash'
+author = 'Ashintosh'
 title = 'Compromised Salesforce Marketing Cloud Used to Send Phishing Emails to Bypass Spam Filters'
 description = 'In this post, we will go over a phishing email I received on 1 November 2025 and how they used compromised Salesforce Marketing Cloud accounts to bypass spam filters.'
 date = '2025-11-02T13:36:42-05:00'
