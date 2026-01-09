@@ -10,6 +10,6 @@ You are free to:
 **Attribution required:** You must give appropriate credit, provide a link to the license, and indicate if changes were made.  
 Suggested attribution format:
 
-> "Title of Work" by Ash, licensed under CC BY 4.0. https://creativecommons.org/licenses/by/4.0/
+> "Title of Work" by Ashintosh, licensed under CC BY 4.0. https://creativecommons.org/licenses/by/4.0/
 
 Full license text: [https://creativecommons.org/licenses/by/4.0/legalcode](https://creativecommons.org/licenses/by/4.0/legalcode)
