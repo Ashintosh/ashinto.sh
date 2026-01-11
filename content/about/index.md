@@ -2,7 +2,7 @@
 title = "About"
 date = "2025-11-02"
 aliases = ["about", "contact"]
-author = "Ash"
+author = "Ashintosh"
 
 showMetadata = false
 +++
@@ -35,7 +35,7 @@ This blog isn't about clickbait or flashy ads. Instead, it's dedicated to provid
 
 **Fingerprint:** `6D54 1A8F 8336 B3F4 7153 37C4 C356 A6B2 11B0 0805`
 
-[Full PGP Public Key](../pgp.txt)
+[Full PGP Public Key](pgp.txt)
 
 <!-- ### Donate
 

@@ -23,7 +23,7 @@ However, attackers are still finding creative ways to bypass these filters so th
 On November 1, 2025, I received an email to my personal Outlook inbox. The subject was "Claim your Reward:" from "AsterdexTeam" which is a cryptocurrency platform.
 
 #### Email Body:
-![Phishing email screenshot](/images/compromised-salesforce-cloud-used-to-send-phishing-emails-to-bypass-spam-filters/2fec45c805d861009f136a32eef11a65.png)
+![Phishing email screenshot](images/2fec45c805d861009f136a32eef11a65.png)
 
 ## Sender
 
@@ -76,9 +76,9 @@ After setting the session, it then redirects us to `access-asterdex[.]com/claim/
 
 #### Actual Phishing Page:
 
-![Phishing page screenshot](/images/compromised-salesforce-cloud-used-to-send-phishing-emails-to-bypass-spam-filters/25ad0d9b4eaa2e1cfa16609e87370277.png)
+![Phishing page screenshot](images/25ad0d9b4eaa2e1cfa16609e87370277.png)
 
-![Phishing page connect screenshot](/images/compromised-salesforce-cloud-used-to-send-phishing-emails-to-bypass-spam-filters/fc4423ee5a3e5f110ed0133f6ed24e81.png)
+![Phishing page connect screenshot](images/fc4423ee5a3e5f110ed0133f6ed24e81.png)
 
 While this page loads, there are other interesting requests being made in the background.
 
