@@ -73,3 +73,8 @@ hostname = "ashinto.sh"
   name = "email"
   url = "mailto:ash@ashinto.sh"
   aria = "My e-Mail Address"
+
+[sitemap]
+changefreq = "weekly"
+priority = 1.0
+filename = "sitemap.xml"
