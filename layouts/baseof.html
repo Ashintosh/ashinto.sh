@@ -40,9 +40,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "{{ with .Params.schemaType }}{{ . }}{{ else }}BlogPosting{{ end }}",
+        "@type": {{ .Params.schemaType | default "BlogPost" }}
         "headline": "{{ .Title | htmlEscape }}",
-        "description": "{{ .Description | default .Summary | htmlEscape }}",
+        "description": "{{ .Description | default .Site.Params.description | htmlEscape}}",
         "author": {
             "@type": "Person",
             "name": "{{ .Params.author | default .Site.Params.author.name | htmlEscape }}"

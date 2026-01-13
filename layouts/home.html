@@ -42,7 +42,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         "@type": "WebPage",
         "url": "{{ .Site.BaseURL }}",
         "name": "{{ .Site.Title | htmlEscape }}",
-        "description": "Ashintosh's blog covering IT, security, and technology topics, including guides, tutorials, and personal insights.",
+        "description": {{ .Site.Params.description | htmlEscape }},
         "publisher": {
             "@type": "Organization",
             "name": "{{ .Site.Title | htmlEscape }}"
@@ -50,8 +50,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     }
     </script>
 
+    {{/* Bundle and include typing animation JS */}}
+    {{ $typing := resources.Get "js/typing.js" }}
+    {{ $main := resources.Get "js/main.js" }}
+    {{ $bundle := slice $typing $main | resources.Concat "js/bundle.js" | minify | fingerprint }}
 </head>
 
+<script src="{{ $bundle.RelPermalink }}"></script>
 <body>
 
     <div class="flexWrapper">

@@ -1,0 +1,68 @@
+{{/*
+
+Modified from: https://github.com/lordmathis/hugo-theme-nightfall/blob/392608f9251d838006f5a71baa3f2730995be907/layouts/_partials/head.html
+
+The MIT License (MIT)
+
+Copyright (c) 2024 Matúš Námešný
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/}}
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ .Description | default .Site.Params.description | htmlEscape }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ .Title | htmlEscape }}">
+<meta property="og:description" content="{{ .Description | default .Site.Params.description | htmlEscape }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if eq .Kind "page" }}article{{ else }}website{{ end }}">
+<meta property="og:image" content="{{ "icon.png" | absURL }}">
+
+<!-- Twitter Card -->
+<meta property="twitter:card" content="summary">
+<meta property="twitter:title" content="{{ .Title | htmlEscape }}">
+<meta property="twitter:description" content="{{ .Description | default .Site.Params.description | htmlEscape }}">
+<meta property="twitter:image" content="{{ "icon.png" | absURL }}">
+
+
+{{ hugo.Generator }}
+
+<!-- Permalink & RSSlink -->
+<link rel="canonical" href="{{ .Permalink }}" >
+{{- with .OutputFormats.Get "RSS" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" >
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" >
+{{- end -}}
+
+{{ $vars := dict
+  "color" (or site.Params.styles.color "blue")
+}}
+
+{{ $options := dict
+  "targetPath" "css/style.css"
+  "transpiler" "dartsass"
+  "vars" $vars
+}}
+
+{{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
+<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+
+{{ partial "custom-head.html" . }}
