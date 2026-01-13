@@ -45,7 +45,7 @@ showCategories = true     # Show categories on post page
 user = "ashintosh"
 userShort = "root"
 hostname = "ashinto.sh"
-description = "Ashintosh's blog covering IT, security, and technology topics, including guides, tutorials, and personal insights."
+description = "Insights, tutorials, and guides on IT, cybersecurity, and technology, with practical tips from real-world experience."
 
   [params.styles]
   color = "#13b27a"
