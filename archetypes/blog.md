@@ -8,4 +8,5 @@ tags = [
     'markdown',
     'text',
 ]
+schemaType = 'BlogPost'
 +++

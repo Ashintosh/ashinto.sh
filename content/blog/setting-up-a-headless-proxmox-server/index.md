@@ -17,6 +17,7 @@ tags = [
     'Network Troubleshooting',
     "SSH Security"
 ]
+schemaType = 'BlogPost'
 +++
 
 ## Introduction

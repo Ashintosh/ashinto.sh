@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{- /* Homepage */ -}}
+  <url>
+    <loc>{{ .Site.BaseURL | safeURL }}</loc>
+    <lastmod>{{ now.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  {{- /* All content pages */ -}}
+  {{- range .Site.Pages }}
+    {{- $priority := 0.5 -}}
+    {{- if or (eq .Kind "page") (eq .Kind "home") -}}
+      {{- $priority = 0.9 -}}
+    {{- else if eq .Kind "section" -}}
+      {{- $priority = 0.8 -}}
+    {{- end -}}
+  <url>
+    <loc>{{ .Permalink | safeURL }}</loc>
+    {{- if .Lastmod }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
+    {{- end }}
+    <changefreq>{{ with .Params.changefreq }}{{ . }}{{ else }}weekly{{ end }}</changefreq>
+    <priority>{{ with .Params.priority }}{{ . }}{{ else }}{{ $priority }}{{ end }}</priority>
+  </url>
+  {{- end }}
+</urlset>

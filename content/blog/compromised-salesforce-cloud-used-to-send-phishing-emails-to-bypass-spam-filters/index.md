@@ -3,6 +3,7 @@ author = 'Ashintosh'
 title = 'Compromised Salesforce Marketing Cloud Used to Send Phishing Emails to Bypass Spam Filters'
 description = 'In this post, we will go over a phishing email I received on 1 November 2025 and how they used compromised Salesforce Marketing Cloud accounts to bypass spam filters.'
 date = '2025-11-02T13:36:42-05:00'
+lastmod = '2025-11-02T13:36:42-05:00'
 draft = false
 tags = [
     'Salesforce',
@@ -12,6 +13,7 @@ tags = [
     'Email Security',
     'Cybercrime',
 ]
+schemaType = "BlogPost"
 +++
 
 Most people have received a phishing email at some point in their lives. Some are easy to spot, while others can fool even seasoned security professionals. Email filters have advanced a lot in the last decade and with the help of AI, many people rarely see spam and phishing emails anywhere outside of their junk directory.

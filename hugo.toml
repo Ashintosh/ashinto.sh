@@ -11,6 +11,9 @@ title = 'ashinto.sh'
     [markup.goldmark.renderer]
       unsafe = true
 
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime"]
+
 [pagination]
 pagerSize = 10
 
@@ -76,5 +79,4 @@ hostname = "ashinto.sh"
 
 [sitemap]
 changefreq = "weekly"
-priority = 1.0
 filename = "sitemap.xml"

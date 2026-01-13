@@ -5,6 +5,7 @@ aliases = ["about", "contact"]
 author = "Ashintosh"
 
 showMetadata = false
+schemaType = "AboutPage"
 +++
 
 Hi, I'm Ash, and this is where I share my journey through the ever-evolving world of IT, cybersecurity, privacy, and technology. The goal of this blog is to provide practical knowledge, insights, and lessons learned as I experiment with technologies and sharpen my skills.

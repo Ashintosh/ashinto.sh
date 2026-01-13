@@ -1,0 +1,87 @@
+{{/*
+
+Modified from: https://github.com/lordmathis/hugo-theme-nightfall/blob/392608f9251d838006f5a71baa3f2730995be907/layouts/baseof.html
+
+The MIT License (MIT)
+
+Copyright (c) 2024 Matúš Námešný
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/}}
+
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <title>{{ block "title" . }}
+        {{ .Site.Title }}
+        {{ end }}</title>
+
+    {{ partial "head.html" . }}
+
+    {{/* JSON-LD structured data for posts */}}
+    {{ if eq .Kind "page" }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "{{ with .Params.schemaType }}{{ . }}{{ else }}BlogPosting{{ end }}",
+        "headline": "{{ .Title | htmlEscape }}",
+        "description": "{{ .Description | default .Summary | htmlEscape }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ .Params.author | default .Site.Params.author.name | htmlEscape }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ .Site.Title }}"
+        },
+        "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+        "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+        "url": "{{ .Permalink }}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ .Permalink }}"
+        },
+        {{- with .Params.tags }},
+        "keywords": "{{ delimit . ", " }}"
+        {{- end }}
+    }
+    </script>
+    {{ end }}
+</head>
+
+<body>
+
+    <div class="flexWrapper">
+        {{ partial "header.html" . }}
+
+        <div class="content">
+            <main class="main">
+                {{ block "main" . }}
+                {{ end }}
+            </main>
+        </div>
+
+
+        {{ partial "footer.html" . }}
+    </div>
+
+</body>
+
+</html>
