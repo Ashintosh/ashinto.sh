@@ -20,12 +20,16 @@ pagerSize = 10
 [menu]
   [[menu.header]]
     name = "blog"
-    weight = 0
+    weight = 3
     url = "blog"
   [[menu.header]]
     name = "about"
-    weight = 1
+    weight = 2
     url = "about"
+  [[menu.header]]
+    name = "resume"
+    weight = 1
+    url = "resume"
 
 # You can configure external links to open in new tabs by adding this parameter
 openLinksInNewTab = true
@@ -67,17 +71,17 @@ description = "Insights, tutorials, and guides on IT, cybersecurity, and technol
   url = "https://tryhackme.com/p/4shintosh"
   aria = "TryHackMe Profile"
 
-  # [[params.social]]
-  # key = 2
-  # name = "linkedin"
-  # url = "https://www.example.com"
-  # aria = "LinkedIn Profile"
-
   [[params.social]]
-  key = 3
+  key = 2
   name = "email"
   url = "mailto:ash@ashinto.sh"
   aria = "My e-Mail Address"
+
+  [[params.social]]
+  key = 3
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/nicholasasmithit"
+  aria = "LinkedIn"
 
 [sitemap]
 changefreq = "weekly"

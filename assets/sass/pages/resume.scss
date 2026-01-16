@@ -1,0 +1,39 @@
+p, h2, h3, h4 {
+    margin: 0;
+}
+
+ul {
+    margin: 0.7rem 0;
+}
+
+ul li {
+    margin: 0.2rem 0;
+}
+
+.section-header {
+    margin: 0.7rem 0;
+}
+
+.section-header hr {
+    margin: 0.4rem 0 0.8rem 0;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column-container h2 {
+    padding-bottom: 1rem;
+}
+
+.column:first-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.column:last-child {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-align: right;
+}

@@ -66,4 +66,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
 <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
+{{ if eq .Title "Resume" }}
+  {{ $resumeStyle := resources.Get "sass/pages/resume.scss" | toCSS | minify | fingerprint }}
+  <link href="{{ $resumeStyle.RelPermalink }}" rel="stylesheet">
+{{ end }}
+
 {{ partial "custom-head.html" . }}
