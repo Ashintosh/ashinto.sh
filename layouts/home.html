@@ -41,11 +41,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         "@content": "https://schema.org",
         "@type": "WebPage",
         "url": "{{ .Site.BaseURL }}",
-        "name": "{{ .Site.Title | htmlEscape }}",
-        "description": {{ .Site.Params.description | htmlEscape }},
+        "name": "{{ .Site.Title }}",
+        "description": {{ .Site.Params.description }},
         "publisher": {
             "@type": "Organization",
-            "name": "{{ .Site.Title | htmlEscape }}"
+            "name": "{{ .Site.Title }}"
         }
     }
     </script>
