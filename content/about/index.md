@@ -1,9 +1,7 @@
 +++
 title = "About"
-date = "2025-11-02"
 aliases = ["about", "contact"]
 author = "Ashintosh"
-
 showMetadata = false
 schemaType = "AboutPage"
 +++

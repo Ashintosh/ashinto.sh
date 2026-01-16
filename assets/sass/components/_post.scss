@@ -95,3 +95,55 @@ a:active{
 a:hover{
   text-decoration: underline;
 }
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 3rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.post-navigation a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.prev-post {
+  max-width: 48%;
+  text-align: left;
+}
+
+.next-post {
+  max-width: 48%;
+  text-align: right;
+  margin-left: auto;
+}
+
+.post-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #d8d8d8;
+  margin-bottom: 0.25rem;
+}
+
+.prev-link:hover {
+  transform: translateX(-2px);
+  filter: brightness(1.2);
+}
+
+.next-link:hover {
+  transform: translateX(2px);
+  filter: brightness(1.2);
+}

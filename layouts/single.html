@@ -107,5 +107,25 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <div>
         {{ .Content }}
     </div>
+    {{ if .Date }}
+        <div class="post-navigation">
+            {{ with .Prev }}
+                {{ if .Date }}
+                    <div class="prev-post">
+                        <span class="post-label">&larr; Previous post</span>
+                        <a class="prev-link" href="{{ .Permalink }}">{{ .Title }}</a>
+                    </div>
+                {{ end }}
+            {{ end }}
+            {{ with .Next }}
+                {{ if .Date }}
+                    <div class="next-post">
+                        <span class="post-label">Next Post &rarr;</span>
+                        <a class="next-link" href="{{ .Permalink }}">{{ .Title }}</a>
+                    </div>
+                {{ end }}
+            {{ end }}
+        </div>
+    {{ end }}
 </div>
 {{ end }}
