@@ -86,3 +86,12 @@ description = "Insights, tutorials, and guides on IT, cybersecurity, and technol
 [sitemap]
 changefreq = "weekly"
 filename = "sitemap.xml"
+
+[outputFormats.Sitemap]
+mediaType = "application/xml"
+baseName = "sitemap"
+isPlainText = true
+rel = "sitemap"
+
+[outputs]
+home = ["Sitemap"]
