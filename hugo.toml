@@ -94,4 +94,4 @@ isPlainText = true
 rel = "sitemap"
 
 [outputs]
-home = ["Sitemap"]
+home = ["HTML", "SITEMAP"]
