@@ -17,6 +17,7 @@ tags = [
     'Network Troubleshooting',
     "SSH Security"
 ]
+categories = ['Home Lab', 'Self-Hosting']
 schemaType = 'BlogPost'
 +++
 

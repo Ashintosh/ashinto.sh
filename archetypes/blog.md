@@ -8,5 +8,6 @@ tags = [
     'markdown',
     'text',
 ]
+categories = ['cat1', 'cat2']
 schemaType = 'BlogPost'
 +++

@@ -13,6 +13,7 @@ tags = [
     'Email Security',
     'Cybercrime',
 ]
+categories = ['Cybersecurity', 'Threat Analysis']
 schemaType = "BlogPost"
 +++
 
