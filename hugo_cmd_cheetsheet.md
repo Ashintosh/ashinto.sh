@@ -2,9 +2,9 @@
 
 A quick reference for commonly used Hugo commands.
 
----
-
 ## Running the Server
+
+Install Hugo and Go: `sudo pacman -S hugo go dart-sass`
 
 | Command          | Description                         |
 |------------------|-------------------------------------|
@@ -12,15 +12,11 @@ A quick reference for commonly used Hugo commands.
 | `hugo server -D` | Run server **showing drafts**       |
 | `hugo server -F` | Run server **showing future posts** |
 
----
-
 ## Creating Content
 
 | Command                                          | Description                                                              |
 |--------------------------------------------------|--------------------------------------------------------------------------|
 | `hugo new blog/[POST-NAME]/index.md --kind blog` | Create a **new blog post** as a folder bundle using the `blog` archetype |
-
----
 
 # Module Management
 

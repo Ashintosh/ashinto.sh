@@ -20,16 +20,12 @@ pagerSize = 10
 [menu]
   [[menu.header]]
     name = "blog"
-    weight = 3
+    weight = 2
     url = "blog"
   [[menu.header]]
     name = "about"
-    weight = 2
-    url = "about"
-  [[menu.header]]
-    name = "resume"
     weight = 1
-    url = "resume"
+    url = "about"
 
 # You can configure external links to open in new tabs by adding this parameter
 openLinksInNewTab = true
